@@ -35,6 +35,12 @@ flowchart LR
     F --> G["Human review in Streamlit"]
 ```
 
+### Interface
+
+![Interface 1](assets/interface_1.jpg)
+
+![Interface 2](assets/interface_2.jpg)
+
 ### Dados
 
 O projeto usa uma base demo sintética com quatro tipos de documento:
@@ -73,6 +79,21 @@ Arquivos principais:
 5. `pipeline.py`
    Consolida métricas e artefatos finais.
 
+### Componentes técnicos implementados
+
+- `document generation layer`
+  cria documentos visuais sintéticos com layout controlado para benchmark reprodutível.
+- `ocr abstraction layer`
+  separa a etapa de OCR do restante do pipeline para permitir troca posterior por motores reais.
+- `document type classifier`
+  usa representação vetorial de texto para inferir se o documento é `invoice`, `receipt`, `service_form` ou `registration_form`.
+- `key information extraction layer`
+  extrai variáveis estruturadas por padrões textuais.
+- `confidence scoring layer`
+  combina cobertura de campos e aderência ao ground truth da base demo para produzir um score de auto-fill.
+- `human-in-the-loop interface`
+  apresenta os campos pré-preenchidos em estrutura tabular para revisão.
+
 ### Técnicas e bibliotecas
 
 - `Pillow`
@@ -87,6 +108,36 @@ Arquivos principais:
   Para a experiência de upload/visualização/prefill.
 - `Plotly`
   Para métricas de qualidade e confiança.
+
+Ferramentas e abordagens usadas:
+
+- `Python`
+  linguagem principal para orquestração de todo o sistema.
+- `OCR simulation layer`
+  usada nesta fase para manter reprodutibilidade e evitar acoplamento precoce com engines externas.
+- `TF-IDF`
+  para vetorização textual dos conteúdos OCR e classificação do tipo documental.
+- `Logistic Regression`
+  como baseline supervisionado para `document type classification`.
+- `Regex-based KIE`
+  para `key information extraction` determinística de campos críticos.
+- `Structured tabular output`
+  para apresentar os dados extraídos como uma base estruturada reutilizável por sistemas downstream.
+
+### Variáveis estruturadas do documento
+
+O sistema organiza os campos extraídos em formato tabular com variáveis como:
+
+- `document_id`
+- `predicted_type`
+- `document_number`
+- `supplier_name`
+- `issue_date`
+- `due_date`
+- `tax_id`
+- `total_amount`
+- `classification_confidence`
+- `auto_fill_confidence`
 
 ### Métricas atuais
 
@@ -104,6 +155,18 @@ Arquivos principais:
 - extração automática de campos
 - preenchimento automático orientado por confiança
 - human-in-the-loop para revisão
+
+### Uso do Codex no desenvolvimento
+
+O Codex foi usado como acelerador de engenharia para:
+
+- estruturar rapidamente o esqueleto do projeto
+- decompor o problema em módulos (`generation`, `ocr`, `classification`, `extraction`, `app`)
+- implementar o pipeline de ponta a ponta com testes
+- iterar na interface em `Streamlit`
+- documentar a arquitetura e os resultados técnicos
+
+De forma honesta: o Codex acelerou a implementação do MVP, mas a definição do problema, a arquitetura do fluxo, a escolha das técnicas e o refinamento do caso de uso foram conduzidos como decisões de produto e engenharia do projeto.
 
 ### Limitação importante
 
@@ -164,3 +227,5 @@ The system simulates a document intake workflow in which a user uploads a docume
 ### Notes
 
 The current version uses a controlled OCR simulation so the project remains fully reproducible. The next step is plugging a real OCR engine such as PaddleOCR or Azure Document Intelligence into the same pipeline.
+
+Codex was used to accelerate scaffolding, implementation, interface iteration, and technical documentation of the MVP.
