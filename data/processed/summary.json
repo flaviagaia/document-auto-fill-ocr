@@ -1,0 +1,8 @@
+{
+  "documents_processed": 4,
+  "ocr_lines": 22,
+  "document_type_accuracy": 1.0,
+  "field_accuracy": 1.0,
+  "average_auto_fill_confidence": 0.925,
+  "documents_high_confidence": 4
+}

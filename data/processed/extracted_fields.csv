@@ -1,0 +1,5 @@
+document_id,document_type,predicted_type,classification_confidence,document_number,supplier_name,issue_date,due_date,tax_id,total_amount,field_match_count,field_coverage_count,auto_fill_confidence
+DOC-001,invoice,invoice,0.4034916956824895,INV-2026-001,Nova Industrial Services,2026-03-10,2026-04-09,12.345.678/0001-90,18540.75,6,6,1.0
+DOC-002,receipt,receipt,0.40829171393560615,RC-7782,Mercado Central Ltda,2026-03-14,,,428.90,6,4,0.9
+DOC-003,service_form,service_form,0.4135409195639305,OS-4419,Prefeitura de Aurora,2026-03-18,,,6700.00,6,4,0.9
+DOC-004,registration_form,registration_form,0.41121104156112226,REG-1088,Instituto Horizonte,2026-03-20,,22.456.789/0001-44,,6,4,0.9

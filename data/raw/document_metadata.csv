@@ -1,0 +1,5 @@
+document_id,document_type,file_name,image_path,ground_truth_json
+DOC-001,invoice,invoice_001.png,raw/documents/invoice_001.png,"{""document_number"": ""INV-2026-001"", ""supplier_name"": ""Nova Industrial Services"", ""issue_date"": ""2026-03-10"", ""due_date"": ""2026-04-09"", ""tax_id"": ""12.345.678/0001-90"", ""total_amount"": ""18540.75""}"
+DOC-002,receipt,receipt_001.png,raw/documents/receipt_001.png,"{""document_number"": ""RC-7782"", ""supplier_name"": ""Mercado Central Ltda"", ""issue_date"": ""2026-03-14"", ""due_date"": """", ""tax_id"": """", ""total_amount"": ""428.90""}"
+DOC-003,service_form,service_form_001.png,raw/documents/service_form_001.png,"{""document_number"": ""OS-4419"", ""supplier_name"": ""Prefeitura de Aurora"", ""issue_date"": ""2026-03-18"", ""due_date"": """", ""tax_id"": """", ""total_amount"": ""6700.00""}"
+DOC-004,registration_form,registration_form_001.png,raw/documents/registration_form_001.png,"{""document_number"": ""REG-1088"", ""supplier_name"": ""Instituto Horizonte"", ""issue_date"": ""2026-03-20"", ""due_date"": """", ""tax_id"": ""22.456.789/0001-44"", ""total_amount"": """"}"

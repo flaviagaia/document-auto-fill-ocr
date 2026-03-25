@@ -1,0 +1,23 @@
+document_id,line_number,ocr_text
+DOC-001,1,Invoice No: INV-2026-001
+DOC-001,2,Supplier: Nova Industrial Services
+DOC-001,3,Issue Date: 2026-03-10
+DOC-001,4,Due Date: 2026-04-09
+DOC-001,5,Tax ID: 12.345.678/0001-90
+DOC-001,6,"Total Amount: BRL 18,540.75"
+DOC-002,1,Receipt ID: RC-7782
+DOC-002,2,Vendor: Mercado Central Ltda
+DOC-002,3,Purchase Date: 2026-03-14
+DOC-002,4,Payment Method: Credit Card
+DOC-002,5,Total: BRL 428.90
+DOC-003,1,Service Form: OS-4419
+DOC-003,2,Client: Prefeitura de Aurora
+DOC-003,3,Service Date: 2026-03-18
+DOC-003,4,"Location: Rua das Palmeiras, 120"
+DOC-003,5,Responsible: Equipe Alfa
+DOC-003,6,"Estimated Value: BRL 6,700.00"
+DOC-004,1,Form ID: REG-1088
+DOC-004,2,Organization: Instituto Horizonte
+DOC-004,3,Submission Date: 2026-03-20
+DOC-004,4,Contact: Ana Beatriz Lima
+DOC-004,5,Document ID: 22.456.789/0001-44
