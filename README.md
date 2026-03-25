@@ -148,6 +148,12 @@ O sistema organiza os campos extraídos em formato tabular com variáveis como:
 - `average_auto_fill_confidence = 0.925`
 - `documents_high_confidence = 4`
 
+Leitura correta dessas métricas:
+
+- a métrica de `document_type_accuracy` foi calculada no conjunto demo controlado do próprio MVP
+- ela serve para validar o fluxo ponta a ponta, não como evidência de generalização estatística
+- a métrica mais representativa nesta fase é a qualidade do preenchimento estruturado no cenário controlado
+
 ### O que o projeto demonstra
 
 - OCR pipeline para intake documental
@@ -175,6 +181,8 @@ Nesta primeira versão, o OCR é `simulado` a partir de uma base controlada de l
 - manter o projeto totalmente reprodutível
 - evitar dependência de credenciais externas
 - demonstrar claramente a etapa de auto-fill e validação
+
+Além disso, a classificação documental usa um conjunto muito pequeno e controlado. Em uma versão mais robusta, o ideal seria medir desempenho em um conjunto separado de documentos reais ou semi-sintéticos mais variados.
 
 A arquitetura foi preparada para depois receber motores reais como:
 
